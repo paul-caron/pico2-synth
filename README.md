@@ -10,6 +10,10 @@ I have used the following ingredient for the MIDI to UART:
 - 220 ohms resistor for the optocoupler internal LED current limiting.
 - A schottky diode (optional) to protect the optocoupler from reversed polarity of the MIDI connector, between the pins of the optocoupler's internal LED.
 - A 4.7kOhm resistor to pull down 3.3v into GPIO 17 of the Pi Pico
+- A Pico/Pico2/PicoW...
+- A PCM5102a sound card
+- A push button
+- A 1/4 inch female connector for audio output (optional, the sound card already has a 3.5mm connector, but a 1/4 inch connector is more robust)
 
 Then for the PCM5102 sound card, I first initialized the bridge solder pads as follows:
 - SCK to ground (solder pads are on top)
