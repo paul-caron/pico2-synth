@@ -3,7 +3,7 @@ A Raspberry Pi Pico/Pico2 micropython code to make a MIDI controlled synthesizer
 
 The synthesizer is a monosynth, outputs only one note at a time with a selection of sine, square and sawtooth waves. Its filter is a biquad filter, with the cutoff adjustable with a MIDI CC 75 and the resonance Q is adjustable with MIDI CC 76. It has an AR envelopped (attack-release), with the attack and release parameters being hardcoded for now.
 
-This synthesizer isn't fancy at all, but is great to have fun with, especially with a reverb or delay guitar pedal. It is my current couch instrument I like to play with on the coffee table :)
+This synthesizer isn't fancy at all, but is great to have fun with, especially with a reverb or delay guitar pedal. It is my favorite couch instrument I like to play with at the moment.
 
 # Circuit
 I have used the following ingredient:
