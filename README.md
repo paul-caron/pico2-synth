@@ -3,8 +3,10 @@ A Raspberry Pi Pico/Pico2 micropython code to make a MIDI controlled synthesizer
 
 The synthesizer is a monosynth, outputs only one note at a time with a selection of sine, square and sawtooth waves. Its filter is a biquad filter, with the cutoff adjustable with a MIDI CC 75 and the resonance Q is adjustable with MIDI CC 76. It has an AR envelopped (attack-release), with the attack and release parameters being hardcoded for now.
 
+This synthesizer isn't fancy at all, but is great to have fun with, especially with a reverb or delay guitar pedal. It is my current couch instrument I like to play with on the coffee table :)
+
 # Circuit
-I have used the following ingredient for the MIDI to UART:
+I have used the following ingredient:
 - MIDI connector 5 DIN
 - 6N137 optocoupler IC
 - 220 ohms resistor for the optocoupler internal LED current limiting.
@@ -14,8 +16,10 @@ I have used the following ingredient for the MIDI to UART:
 - A PCM5102a sound card
 - A push button
 - A 1/4 inch female connector for audio output (optional, the sound card already has a 3.5mm connector, but a 1/4 inch connector is more robust)
+- An amplifier, as the PCM5102a is not meant to drive speakers.
+- A MIDI controller
 
-Then for the PCM5102 sound card, I first initialized the bridge solder pads as follows:
+For the PCM5102 sound card, I first initialized the bridge solder pads as follows:
 - SCK to ground (solder pads are on top)
 - H1L to L
 - H2L to L
