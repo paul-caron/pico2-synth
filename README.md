@@ -27,4 +27,5 @@ The optocoupler vo pin is sink for 3.3V of the Pico through a 4.7k resistor, and
 
 Optionally a push button can be added to change the synthesizer waveform between sine, square, saw. The push button should be connected between ground and GPIO 15 on the Pico.
 
+Here is what the optocoupler circuit should look like (use pin 17, not 1)
 ![optocoupler circuit](https://github.com/paul-caron/pico2-synth/blob/main/optocoupler.jpg?raw=true)
