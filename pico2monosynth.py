@@ -110,8 +110,8 @@ def biquad_set_lpf(fc, Q):
     a2 = a2n / a0n
 
     # reset filter state on coefficient update
-    z1 = 0.0
-    z2 = 0.0
+    #z1 = 0.0
+    #z2 = 0.0
 
 biquad_set_lpf(fc_hz, q)
 prev_fc = fc_hz
@@ -238,8 +238,8 @@ N = 64
 buf = bytearray(N * 2)
 
 # ---------- Envelope times (seconds) ----------
-ATTACK_S = 0.08
-RELEASE_S = 0.3
+ATTACK_S = 0.05
+RELEASE_S = 0.2
 
 dt_s = N / FS
 attack_step = dt_s / ATTACK_S if ATTACK_S > 0 else 1.0
@@ -262,8 +262,8 @@ while True:
         if vca_current_amplitude < vca_target_amplitude:
             vca_current_amplitude = vca_target_amplitude
 
-    # Drain limited MIDI per loop so audio stays steady
-    data = uart.read(32)
+    # Drain limited MIDI per loop so audio stays steady, read only few bytes per loop to avoid sount output drops.
+    data = uart.read(4)
     if data:
         for b in data:
             process_midi_byte(b)
@@ -314,3 +314,4 @@ while True:
     z2 = z2_local
 
     i2s.write(buf)
+
