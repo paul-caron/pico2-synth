@@ -1,6 +1,8 @@
 # Pico2-Synth
 A Raspberry Pi Pico/Pico2 micropython code to make a MIDI controlled synthesizer with a MIDI to UART optocoupler circuit and a PCM5102a module sound card. Works with Pico 1, but the overclocking at 300_000_000 MHz might need be reduced and consequently also reduce FS (sampling rate)
 
+The synthesizer is a monosynth, outputs only one note at a time with a selection of sine, square and sawtooth waves. Its filter is a biquad filter, with the cutoff adjustable with a MIDI CC 75 and the resonance Q is adjustable with MIDI CC 76.
+
 # Circuit
 I have used the following ingredient for the MIDI to UART:
 - MIDI connector 5 DIN
