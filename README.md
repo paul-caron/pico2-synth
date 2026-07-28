@@ -17,7 +17,7 @@ I have used the following ingredient:
 - A push button
 - A 1/4 inch female connector for audio output (optional, the sound card already has a 3.5mm connector, but a 1/4 inch connector is more robust)
 - An amplifier, as the PCM5102a is not meant to drive speakers.
-- A MIDI controller
+- A MIDI controller keyboard
 
 For the PCM5102 sound card, I first initialized the bridge solder pads as follows:
 - SCK to ground (solder pads are on top)
